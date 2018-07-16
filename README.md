@@ -13,11 +13,17 @@
 - Выбираем вкладку Мои приложения и создаём приложение, без изменений параметров
 - Подтверждаем действия с помощью мобильной версии или номера телефона
 - Переходим во вкладку Настройки и сохраняем(например, в блокноте) ID приложения
-- Переходим на страницу по URL: <https://oauth.vk.com/authorizeclient_id=ХХХХХХХ&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=messages&response_type=token>
+- Переходим на страницу по URL:
+```
+https://oauth.vk.com/authorizeclient_id=ХХХХХХХ&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=messages&response_type=token
+```
 
 где **ХХХХХХХ** это ID вашего приложения
 
-- После перехода, подтверждаем, что наше приложение получит доступ к данным и получаем успешное выполнение операции в виде URL:  <https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=86400&user_id=1963743>
+- После перехода, подтверждаем, что наше приложение получит доступ к данным и получаем успешное выполнение операции в виде URL, который содержит необходимое значение токена:
+
+```https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=86400&user_id=1963743
+```
 
 
 #### Получение ID диалога:
