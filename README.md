@@ -22,7 +22,8 @@ https://oauth.vk.com/authorizeclient_id=ХХХХХХХ&display=page&redirect_uri
 
 - После перехода, подтверждаем, что наше приложение получит доступ к данным и получаем успешное выполнение операции в виде URL, который содержит необходимое значение токена:
 
-```https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=86400&user_id=1963743
+```
+https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=86400&user_id=1963743
 ```
 
 
