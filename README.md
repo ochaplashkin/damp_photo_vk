@@ -17,10 +17,7 @@
 
 где **ХХХХХХХ** это ID вашего приложения
 
-- После перехода, подтверждаем, что наше приложение получит доступ к данным и получаем успешное выполнение операции в виде URL:  <https://oauth.vk.com/blank.html#access_token=7db5c2e7290ddb6f9854dac12dbf02ba9941153facc136ea8fcf35479ac8d1e7f1ce04389b87812c3ef20&expires_in=86400&user_id=1963743>
-
-в данном случае токен равен: *7db5c2e7290ddb6f9854dac12dbf02ba9941153facc136ea8fcf35479ac8d1e7f1ce04389b87812c3ef20*
-
+- После перехода, подтверждаем, что наше приложение получит доступ к данным и получаем успешное выполнение операции в виде URL:  <https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=86400&user_id=1963743>
 
 
 #### Получение ID диалога:
