@@ -1,7 +1,6 @@
 import vk
 import os
 import sys
-import time
 import urllib.request
 
 SETTINGS = {}
@@ -24,28 +23,34 @@ def setup():
 	os.chdir(SETTINGS['folder'])
 
 	
-def download_and_save(url,name_content,k):
-	file_name = name_content + "_" + str(k) + ".jpg"
-	urllib.request.urlretrieve(url, file_name)
-	print(file_name + "......... ok")
+def download_and_save(url,k):
+	try:
+		file_name = "photo" + "_" + str(k) + ".jpg"
+		urllib.request.urlretrieve(url, file_name)
+		print(file_name + "......... ok")
+	except Exception as inst:
+		print (file_name + " : " + inst)
+		print("URL: " + url)
+	
 	
 def parse():
 	session = vk.Session(access_token=SETTINGS['token'])
 	api = vk.API(session, v="5.80")
 	
-	content = api.messages.getHistoryAttachments(peer_id=SETTINGS['peer_id'],media_type="photo")
+	content = api.messages.getHistoryAttachments(peer_id=SETTINGS['peer_id'],media_type="photo",count=200)
 	
 	counter = 0
 	while True:
 		for item in content['items']:
 			for size in item['attachment']['photo']['sizes']:
 				if size['type'] == 'z':
-					download_and_save(size['url'], "photo", counter)
+					download_and_save(size['url'], counter)
 					counter+=1
 		if 'next_from' in content:
-			content = api.messages.getHistoryAttachments(peer_id=SETTINGS['peer_id'],media_type="photo",start_from=content['next_from'])
+			content = api.messages.getHistoryAttachments(peer_id=SETTINGS['peer_id'],media_type="photo",start_from=content['next_from'],count=200)
 		else:
 			break
+	print("Done")
 
 if __name__ == "__main__":
 	setup()
