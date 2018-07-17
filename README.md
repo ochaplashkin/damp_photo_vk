@@ -15,7 +15,7 @@
 - Переходим во вкладку Настройки и сохраняем(например, в блокноте) ID приложения
 - Переходим на страницу по URL:
 ```
-https://oauth.vk.com/authorizeclient_id=ХХХХХХХ&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=messages&response_type=token
+https://oauth.vk.com/authorize?client_id=ХХХХХХХ&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,photos,audio,video,docs,notes,pages,status,wall,groups,messages,notifications,offline&response_type=token
 ```
 
 где **ХХХХХХХ** это ID вашего приложения
@@ -23,7 +23,7 @@ https://oauth.vk.com/authorizeclient_id=ХХХХХХХ&display=page&redirect_uri
 - После перехода, подтверждаем, что наше приложение получит доступ к данным и получаем успешное выполнение операции в виде URL, который содержит необходимое значение токена:
 
 ```
-https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=86400&user_id=1963743
+https://oauth.vk.com/blank.html#access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&expires_in=0&user_id=196374324
 ```
 
 
